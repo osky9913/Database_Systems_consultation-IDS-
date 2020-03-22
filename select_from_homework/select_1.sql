@@ -3,13 +3,14 @@
 -- jméno a příjmení přítele, e-mail přítele).Uspořádejte podle přihlašovacího jména Jana
 --  Nováka.
 
-Select  "login_name1",  "name_1" , "login_name2" , "name_2","email" From
-(select "accountNumber", "nameSurname" as "name_2" ,"loginName" as "login_name2", "email"  from "USER" ) rightside
+Select  "login_name1",  "email_1" , "login_name2" , "name_2","email_2" From
+
+(select "accountNumber", "nameSurname" as "name_2" ,"loginName" as "login_name2", "email"  as "email_2" from "USER" ) rightside
 
 inner join
 
 (Select * From
-    ( SELECT "loginName" as "login_name1" , "nameSurname" as "name_1" , "accountNumber" FROM "USER" WHERE "nameSurname" = 'Jan Novak' ) t1
+    ( SELECT "loginName" as "login_name1" , "email" as "email_1","nameSurname" as "name_1" , "accountNumber" FROM "USER" WHERE "nameSurname" = 'Jan Novak' ) t1
 inner join
     (
         (SELECT "accountNumber2" as "Jan", "accountNumber1" as "Friend" FROM ASSOCIATED_ACCOUNTS)
