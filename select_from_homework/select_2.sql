@@ -3,7 +3,7 @@
 -- (přihlašovací jméno Jana Nováka, e-mail Jana Nováka, počet přátel, počet ročníků).
 
 (SELECT "USER"."loginName", "USER"."email",
-        (SELECT COUNT("USER"."loginName") AS "numOfFriends"
+        (SELECT COUNT("USER"."loginName")
         FROM "USER"
         INNER JOIN (
             SELECT ASSOCIATED_ACCOUNTS."accountNumber2"
@@ -13,11 +13,11 @@
                      FROM "USER"
                      WHERE "USER"."nameSurname" = 'Jan Novak')
             ) friendsData
-        ON "USER"."accountNumber" = friendsData."accountNumber2"),
+        ON "USER"."accountNumber" = friendsData."accountNumber2") numOfFriends,
 
-        (SELECT DISTINCT COUNT("USER"."birthday") AS "numOfDiffBirthdays"
+        (SELECT DISTINCT COUNT("USER"."birthday")
         FROM "USER"
-        WHERE "USER"."nameSurname" = 'Jan Novak')
+        WHERE "USER"."nameSurname" = 'Jan Novak') numOfDiffBirthdays
 FROM "USER"
 WHERE "USER"."nameSurname" = 'Jan Novak');
 
