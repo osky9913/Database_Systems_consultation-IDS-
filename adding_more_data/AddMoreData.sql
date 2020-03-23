@@ -10,6 +10,8 @@ insert into "ACCOUNT" ("accountNumber", "password") values ('koshee7_23', 'MEZgj
 insert into "ACCOUNT" ("accountNumber", "password") values ('jsauven8_23', 'vYDfObS' );
 insert into "ACCOUNT" ("accountNumber", "password") values ('malexsandrovich9_23', '2Qy8KI' );
 insert into "ACCOUNT" ("accountNumber", "password") values ('pepega_12', '2Q32kjKI' );
+insert into "ACCOUNT" ("accountNumber", "password") values ('clownfiesta_12', '2Qdf32kjKI' );
+
 
 insert into "USER" ("loginName", "nameSurname", "birthday", "email","accountNumber") values ('Janko123','Jan Novak', TO_DATE('0244/06/08', 'yyyy-mm-dd'), 'janko@php.net','Janko123_23');
 insert into "USER" ("loginName", "nameSurname", "birthday", "email","accountNumber") values ('alucius0','Adan Lucius', TO_DATE('0244/06/08', 'yyyy-mm-dd'), 'alucius0@php.net','alucius0_23');
@@ -23,6 +25,7 @@ insert into "USER" ("loginName", "nameSurname", "birthday", "email","accountNumb
 insert into "USER" ("loginName", "nameSurname", "birthday", "email","accountNumber") values ('jsauven8','Janaye Sauven', TO_DATE('0140/09/04', 'yyyy-mm-dd'), 'jsauven8@ihg.com','jsauven8_23');
 insert into "USER" ("loginName", "nameSurname", "birthday", "email","accountNumber") values ('malexsandrovich9', 'Meir Alexsandrovich', TO_DATE('1398/07/15', 'yyyy-mm-dd'), 'malexsandrovich9@ifeng.com','malexsandrovich9_23');
 insert into "USER" ("loginName", "nameSurname", "birthday", "email","accountNumber") values ('pepega12', 'Jan Novak', TO_DATE('1998/11/15', 'yyyy-mm-dd'), 'novakjano6@pepega.com','pepega_12');
+insert into "USER" ("loginName", "nameSurname", "birthday", "email","accountNumber") values ('clownfiesta12', 'Jan Novak', TO_DATE('1938/1/15', 'yyyy-mm-dd'), 'novakjano6@pepega.com','clownfiesta_12');
 
 
 INSERT INTO "PAGE"("pageName", "accountNumber") VALUES ('Janko123ADS'   ,'Janko123_23');
@@ -37,6 +40,7 @@ INSERT INTO "PAGE"("pageName", "accountNumber") VALUES ('kosheeADS'   ,'koshee7_
 INSERT INTO "PAGE"("pageName", "accountNumber") VALUES ('jsauvenADS'   ,'jsauven8_23');
 INSERT INTO "PAGE"("pageName", "accountNumber") VALUES ('malexsandrovichADS'   ,'malexsandrovich9_23');
 INSERT INTO "PAGE"("pageName", "accountNumber") VALUES ('NovakSALES','pepega_12');
+INSERT INTO "PAGE"("pageName", "accountNumber") VALUES ('fiesta','clownfiesta_12');
 
 
 INSERT INTO "PERMISSIONS" ("pageName", "accountNumber", "permissionsAccountNumber") VALUES ('Janko123ADS','Janko123_23','Janko123_23' );
@@ -51,6 +55,7 @@ INSERT INTO "PERMISSIONS" ("pageName", "accountNumber", "permissionsAccountNumbe
 INSERT INTO "PERMISSIONS" ("pageName", "accountNumber", "permissionsAccountNumber") VALUES ('jsauvenADS','jsauven8_23','jsauven8_23' );
 INSERT INTO "PERMISSIONS" ("pageName", "accountNumber", "permissionsAccountNumber") VALUES ('malexsandrovichADS','malexsandrovich9_23','malexsandrovich9_23' );
 INSERT INTO "PERMISSIONS" ("pageName", "accountNumber", "permissionsAccountNumber") VALUES ('NovakSALES','pepega_12','pepega_12' );
+INSERT INTO "PERMISSIONS" ("pageName", "accountNumber", "permissionsAccountNumber") VALUES ('fiesta','clownfiesta_12','clownfiesta_12' );
 
 
 INSERT INTO "COMPANY_ACCOUNT"("accountNumber", "companyName") VALUES ('Janko123_23', 'Google');
@@ -65,6 +70,7 @@ INSERT INTO "COMPANY_ACCOUNT"("accountNumber", "companyName") VALUES ('koshee7_2
 INSERT INTO "COMPANY_ACCOUNT"("accountNumber", "companyName") VALUES ('jsauven8_23', 'Zoombeat');
 INSERT INTO "COMPANY_ACCOUNT"("accountNumber", "companyName") VALUES ('malexsandrovich9_23', 'Zoozzy');
 INSERT INTO "COMPANY_ACCOUNT"("accountNumber", "companyName") VALUES ('pepega_12', 'ClownFiesta');
+INSERT INTO "COMPANY_ACCOUNT"("accountNumber", "companyName") VALUES ('clownfiesta_12', 'amaryn');
 
 
 INSERT INTO "PERSONAL_ACCOUNT"("accountNumber") VALUES ('Janko123_23');
@@ -79,6 +85,7 @@ insert into "PERSONAL_ACCOUNT" ("accountNumber") values ('koshee7_23');
 insert into "PERSONAL_ACCOUNT" ("accountNumber") values ('jsauven8_23');
 insert into "PERSONAL_ACCOUNT" ("accountNumber") values ('malexsandrovich9_23');
 insert into "PERSONAL_ACCOUNT" ("accountNumber") values ('pepega_12');
+insert into "PERSONAL_ACCOUNT" ("accountNumber") values ('clownfiesta_12');
 
 
 INSERT INTO "ADVERTISEMENT" ("pageName", "accountNumber","creatorsAccountNumber") VALUES ('Janko123ADS'   ,'Janko123_23', 'Janko123_23');
@@ -93,9 +100,7 @@ INSERT INTO "ADVERTISEMENT" ("pageName", "accountNumber","creatorsAccountNumber"
 INSERT INTO "ADVERTISEMENT" ("pageName", "accountNumber","creatorsAccountNumber") VALUES ('jsauvenADS'   ,'jsauven8_23', 'jsauven8_23');
 INSERT INTO "ADVERTISEMENT" ("pageName", "accountNumber","creatorsAccountNumber") VALUES ('malexsandrovichADS'   ,'malexsandrovich9_23', 'malexsandrovich9_23');
 INSERT INTO "ADVERTISEMENT" ("pageName", "accountNumber","creatorsAccountNumber") VALUES ('NovakSALES'   ,'pepega_12', 'pepega_12');
-
-
-
+INSERT INTO "ADVERTISEMENT" ("pageName", "accountNumber","creatorsAccountNumber") VALUES ('fiesta'   ,'clownfiesta_12', 'clownfiesta_12');
 
 
 
