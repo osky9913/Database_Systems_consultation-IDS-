@@ -166,7 +166,7 @@ FROM "USER"  t1
 LEFT JOIN ASSOCIATED_ACCOUNTS t2 ON  (t2."accountNumber1" = t1."accountNumber"  OR  "accountNumber2" = t1."accountNumber")
 WHERE t1."nameSurname" = 'Jan Novak' AND (t2."accountNumber1" IS NULL  or t2."accountNumber2"  IS NULL);
 ```
-#Zadanie štvrtého selectu
+# Zadanie štvrtého selectu
 
 4.) Kdo má nejvíce přátel a kolik? Takových uživatelů může být
 více. Očekává se tabulka výsledku se schématem (přihlašovací jméno,
