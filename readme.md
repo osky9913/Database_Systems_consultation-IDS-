@@ -105,8 +105,8 @@ SELECT "USER"."accountNumber" account3
 ```
 
 - Tieto dva výbery teraz využijeme na nájdenie priatelstiev Jána Nováka. Teda hľadáme výskyt Janovho __"accountNumber"__ v skôr
- vytvorených stĺpcoch __account1__ a __account2__, prípadné vyskyty Jána nováka na riadku uložím do stĺpca __account3__ ktorý
- vyberám spoločne s počtom týchto vyskytov(počet priatelstiev Jana Nováka).
+ vytvorených stĺpcoch __account1__ a __account2__, prípadné vyskyty Jána nováka na riadku uložím do stĺpca __NovakAccounts.account3__ ktorý
+ vyberám spoločne s počtom týchto vyskytov(počet priatelstiev Jana Nováka) __COUNT(NovakAccounts.account3)__.
 ```sql
 SELECT NovakAccounts.account3, COUNT(NovakAccounts.account3) count
 FROM (
@@ -123,7 +123,7 @@ FROM (
 WHERE NovakAccounts.account3 = friendsData.account2 OR  NovakAccounts.account3 = friendsData.account1
 GROUP BY NovakAccounts.account3
 ```
-- Následne už len vyberiem z __"USER"__ údaje zo zadania korešpondujúce pre __account3__, teda číslo účtu Jána Nováka.
+- Následne už len vyberiem __"USER"."accountNumber"__ z __"USER"__ ktoré porovnávam s __matches.account3__, teda číslo účtu Jána Nováka, ktoré sa vyskytlo v tabulke priatelstiev.
 ```sql
 SELECT "USER"."nameSurname",  "USER"."loginName", matches.count
 FROM "USER",
@@ -193,7 +193,7 @@ FROM
 ORDER BY f2.count DESC
 ``` 
 - ako posledné potrebujeme už len vyfiltrovať užívateľov ktorí majú maximálny počet. Ten zistím rovnako ako kód vyššie. Len s tým rozdielom
-že vyberáme len údaj __MAX(t2.count)__, ktorý porovnávame s __numOfFriends__ z predchádzajúceho selectu, teda zostávajú len údaje, ktoré sa
+že vyberáme len údaj __MAX(t2.count)__, ktorý porovnávame s __usersWithFriends.numOfFriends__ z predchádzajúceho selectu, teda zostávajú len údaje, ktoré sa
 rovnajú maximálnemu počtu priateľov.
 
 ```sql
