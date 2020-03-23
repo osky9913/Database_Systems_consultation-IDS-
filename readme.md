@@ -243,3 +243,17 @@ WHERE t2."accountNumber1" IS NULL  or t2."accountNumber2"  IS NULL
 
 - Vyberáme __loginName__, __nameSurname__,__email__ podľa zadania pričom pomocou letfJoinu kontroluje napojenie na tabuľku __ASSOCIATED_ACCOUNTS__
 pričom kontrolujeme  pomocou podmienky IS NULL pravu alebo ľavú časť __ASSOCIATED_ACCOUNTS__.
+
+# Výsledné tabuľky selectov
+
+### 1.select
+![image](https://user-images.githubusercontent.com/49416557/77314228-87dea180-6d05-11ea-8a42-ff4d72dad733.png)
+### 2.select
+![image](https://user-images.githubusercontent.com/49416557/77314198-7ac1b280-6d05-11ea-805f-ea0de693d9eb.png)
+### 3.select
+![image](https://user-images.githubusercontent.com/49416557/77314157-65e51f00-6d05-11ea-874b-60e3ea474b23.png)
+### 4.select
+![image](https://user-images.githubusercontent.com/49416557/77314128-5960c680-6d05-11ea-8b1c-95ed842d36bf.png)
+### 5.select
+![image](https://user-images.githubusercontent.com/49416557/77313857-e8211380-6d04-11ea-9cac-cab0313ecf80.png)
+
